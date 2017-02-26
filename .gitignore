@@ -1,4 +1,8 @@
-_site
-.sass-cache
 .jekyll-metadata
-.vscode/
+.htaccess
+.DS_Store
+.sass-cache
+Gemfile.lock
+_site/
+_drafts/
+2017-02-05-creating-a-post.md
