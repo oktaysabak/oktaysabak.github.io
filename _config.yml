@@ -25,7 +25,7 @@ github_username:  oktaysabak
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-hacker
+
 gems:
   - jekyll-feed
 exclude:
