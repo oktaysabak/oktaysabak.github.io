@@ -1,5 +1,0 @@
-source 'https://rubygems.org'
-gem 'jekyll'
-gem 'jekyll-sitemap'
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'sass-rails', '>= 3.2'
