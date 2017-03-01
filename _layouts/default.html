@@ -26,9 +26,9 @@
 <body>
     <div class="wrapper">
     <ol class="breadcrumb">
-        <a class="breadcrumb-item active" >Home</a>        
-        <a class="breadcrumb-item active" href="me/">Who am I?</a>
-        <a class="breadcrumb-item active" href="">Posts</a>
+        <a class="breadcrumb-item active" href="{{ site.home }}" >Home</a>        
+        <a class="breadcrumb-item active" href="{{ site.me }}">Who am I?</a>
+        <a class="breadcrumb-item active" href="{{ site.posts }}">Posts</a>
     </ol>
     <div class="wrapper">
         {{ content }}

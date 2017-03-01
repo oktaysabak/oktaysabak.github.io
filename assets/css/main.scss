@@ -3,7 +3,8 @@
 
 @import "reset";
 @import "config";
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
 body {
 	color: $color-black;
 	background: $color-white;
