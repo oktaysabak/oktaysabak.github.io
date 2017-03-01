@@ -24,7 +24,8 @@ exclude: ["README.md", "LICENSE"]
 sass:
   style: :compressed
   sass_dir: _sass
-
+  assets/stylesheets/_bootstrap.scss
+  assets/stylesheets/bootstrap
 
 # Markdown
 markdown: kramdown
