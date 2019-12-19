@@ -1,17 +1,75 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>git için ayarların yapılması</title>
-    <meta name="description" content="">
-    
-    
-    <link rel="preload" href="/assets/css/0.styles.0d19fd84.css" as="style"><link rel="preload" href="/assets/js/app.76f5096b.js" as="script"><link rel="preload" href="/assets/js/4.f983983c.js" as="script"><link rel="prefetch" href="/assets/js/2.d8f505d4.js"><link rel="prefetch" href="/assets/js/3.32b82bb7.js"><link rel="prefetch" href="/assets/js/5.d6d69b22.js"><link rel="prefetch" href="/assets/js/6.c6708033.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.0d19fd84.css">
-  </head>
-  <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <!----> </div> <div class="page"> <div class="content"><h1 id="git-icin-ayarlarin-yapilmasi"><a href="#git-icin-ayarlarin-yapilmasi" aria-hidden="true" class="header-anchor">#</a> git için ayarların yapılması</h1> <p>git'in nasıl çalışacağı ve sizin kim olduğnuz ile ilgili bilgilerin ayarlanması gerekmektedir. bunun için de git, çeşitli konfigürasyonlara sahiptir.</p> <p>sistemde var olan tüm kullanıcılar ve onların <code>genel</code> için geçerli olan değerleri <em>/etc/gitconfig/</em> içerisinde tutulur.</p> <blockquote><p>proje içerisinde, <em>.git/config</em> kısmında yer alan konfigürasyonla, geçerli olan ayarlara göre öncelikli olarak çalışacaktır.</p></blockquote> <p>örneğin bir projeye katkı yapmak istediniz. değişiklikler yapıp gönderdiniz. veya kendi projenizi oluşturup, push, pull vb işlemleri yapacaksınız. bu işlemleri yaparken git size zaten soracaktır, <code>kimsin sen?</code> işte burada devreye global ayarları girmenizi isteyeceği bir output verecektir.</p> <p>yazmanız gereken mail adresiniz ve sizi tanıtan isminiz olacaktır. şöyle gösterelim:</p> <p><code>git config --global user.name &quot;oktay sabak&quot; git config --global user.email oktaysabak@yandex.com</code></p> <p>daha detaylı ayarları yapmak, değiştirmek, incelemek için terminale <code>git config --global</code> yazdığınızda global ayarları, sistem ayarları, lokal ayarları vb diğer detayları inceleyebilirsiniz.</p> <blockquote><p><code>git config --list</code> komutu ile de gite ait bütün ayarları listeleyebilirsiniz.</p></blockquote> <h2 id="ozet"><a href="#ozet" aria-hidden="true" class="header-anchor">#</a> özet</h2> <ul><li>git'in sizi tanıması gerekir.</li> <li>git ayarlarının tutulduğu çeşitli dosyalar vardır. ve değiştirilebilir.</li></ul> <p>** nice senelere **</p></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
-    <script src="/assets/js/app.76f5096b.js" defer></script><script src="/assets/js/4.f983983c.js" defer></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>git için ayarların yapılması</title>
+  <meta name="description" content="">
+</head>
+
+<body>
+  <div id="app" data-server-rendered="true">
+    <div class="theme-container no-sidebar">
+      <header class="navbar">
+        <div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
+            viewBox="0 0 448 512" class="icon">
+            <path fill="currentColor"
+              d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z">
+            </path>
+          </svg></div> <a href="/" class="home-link router-link-active"></a>
+        <div class="links" style="max-width:nullpx;">
+          <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value="">
+            <!---->
+          </div>
+          <!---->
+        </div>
+      </header>
+      <div class="sidebar-mask"></div>
+      <div class="sidebar">
+        <!---->
+        <!---->
+      </div>
+      <div class="page">
+        <div class="content">
+          <h1 id="git-icin-ayarlarin-yapilmasi"><a href="#git-icin-ayarlarin-yapilmasi" aria-hidden="true"
+              class="header-anchor">#</a> git için ayarların yapılması</h1>
+          <p>git'in nasıl çalışacağı ve sizin kim olduğnuz ile ilgili bilgilerin ayarlanması gerekmektedir. bunun için
+            de git, çeşitli konfigürasyonlara sahiptir.</p>
+          <p>sistemde var olan tüm kullanıcılar ve onların <code>genel</code> için geçerli olan değerleri
+            <em>/etc/gitconfig/</em> içerisinde tutulur.</p>
+          <blockquote>
+            <p>proje içerisinde, <em>.git/config</em> kısmında yer alan konfigürasyonla, geçerli olan ayarlara göre
+              öncelikli olarak çalışacaktır.</p>
+          </blockquote>
+          <p>örneğin bir projeye katkı yapmak istediniz. değişiklikler yapıp gönderdiniz. veya kendi projenizi
+            oluşturup, push, pull vb işlemleri yapacaksınız. bu işlemleri yaparken git size zaten soracaktır,
+            <code>kimsin sen?</code> işte burada devreye global ayarları girmenizi isteyeceği bir output verecektir.</p>
+          <p>yazmanız gereken mail adresiniz ve sizi tanıtan isminiz olacaktır. şöyle gösterelim:</p>
+          <p><code>git config --global user.name &quot;oktay sabak&quot; git config --global user.email
+              oktaysabak@yandex.com</code></p>
+          <p>daha detaylı ayarları yapmak, değiştirmek, incelemek için terminale <code>git config --global</code>
+            yazdığınızda global ayarları, sistem ayarları, lokal ayarları vb diğer detayları inceleyebilirsiniz.</p>
+          <blockquote>
+            <p><code>git config --list</code> komutu ile de gite ait bütün ayarları listeleyebilirsiniz.</p>
+          </blockquote>
+          <h2 id="ozet"><a href="#ozet" aria-hidden="true" class="header-anchor">#</a> özet</h2>
+          <ul>
+            <li>git'in sizi tanıması gerekir.</li>
+            <li>git ayarlarının tutulduğu çeşitli dosyalar vardır. ve değiştirilebilir.</li>
+          </ul>
+          <p>** nice senelere **</p>
+        </div>
+        <div class="page-edit">
+          <!---->
+          <!---->
+        </div>
+        <!---->
+      </div>
+      <!---->
+    </div>
+  </div>
+
+</body>
+
 </html>
